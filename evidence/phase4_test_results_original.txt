@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.0.2, pluggy-1.6.0 -- /opt/pyvenv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.5', 'Platform': 'Linux-6.18.55-x86_64-with-glibc2.41', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.13.0', 'ddtrace': '4.4.0', 'Faker': '40.1.2', 'asyncio': '1.3.0', 'cov': '7.0.0', 'json-report': '1.5.0', 'metadata': '3.1.1'}, 'PLATFORM': 'linux/amd64', 'CI': 'true'}
+rootdir: /mnt/data/ecommerce-warehouse
+plugins: anyio-4.13.0, ddtrace-4.4.0, Faker-40.1.2, asyncio-1.3.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 25 items
+
+tests/test_pipeline.py::test_happy_path_and_financial_reconciliation PASSED [  4%]
+tests/test_pipeline.py::test_empty_batch PASSED                          [  8%]
+tests/test_pipeline.py::test_malformed_row_quarantined[O0000001,31,P0001,2,100\n] PASSED [ 12%]
+tests/test_pipeline.py::test_malformed_row_quarantined[O0000001,31,P0001,2,100,0,EXTRA\n] PASSED [ 16%]
+tests/test_pipeline.py::test_missing_field_and_raw_lineage PASSED        [ 20%]
+tests/test_pipeline.py::test_exact_duplicates_skipped PASSED             [ 24%]
+tests/test_pipeline.py::test_conflicting_duplicate_order_line_rejected PASSED [ 28%]
+tests/test_pipeline.py::test_unexpected_schema_change_fails_atomically[customer_id,name,city] PASSED [ 32%]
+tests/test_pipeline.py::test_unexpected_schema_change_fails_atomically[customer_id,customer_name,city,unexpected_column] PASSED [ 36%]
+tests/test_pipeline.py::test_invalid_customer_reference_rejects_order_and_item PASSED [ 40%]
+tests/test_pipeline.py::test_invalid_product_reference PASSED            [ 44%]
+tests/test_pipeline.py::test_domain_invalid_quantities_and_discounts[0-100-0-out_of_range:quantity] PASSED [ 48%]
+tests/test_pipeline.py::test_domain_invalid_quantities_and_discounts[-3-100-0-out_of_range:quantity] PASSED [ 52%]
+tests/test_pipeline.py::test_domain_invalid_quantities_and_discounts[2-100-201-discount_exceeds_gross] PASSED [ 56%]
+tests/test_pipeline.py::test_domain_invalid_quantities_and_discounts[2--1-0-out_of_range:unit_price_cents] PASSED [ 60%]
+tests/test_pipeline.py::test_zero_price_zero_discount_is_valid_boundary PASSED [ 64%]
+tests/test_pipeline.py::test_cancelled_pending_excluded_not_rejected PASSED [ 68%]
+tests/test_pipeline.py::test_late_arriving_order_on_second_run PASSED    [ 72%]
+tests/test_pipeline.py::test_idempotent_rerun_does_not_duplicate_facts_or_dimensions PASSED [ 76%]
+tests/test_pipeline.py::test_failure_rollback_and_successful_retry PASSED [ 80%]
+tests/test_pipeline.py::test_changed_existing_fact_rejected_not_overwritten PASSED [ 84%]
+tests/test_pipeline.py::test_changed_reference_snapshot_is_rejected PASSED [ 88%]
+tests/test_pipeline.py::test_invalid_timestamp_requires_timezone PASSED  [ 92%]
+tests/test_pipeline.py::test_loaded_order_change_to_cancelled_is_flagged PASSED [ 96%]
+tests/test_pipeline.py::test_stable_surrogate_keys PASSED                [100%]
+
+============================== 25 passed in 0.57s ==============================

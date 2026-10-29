@@ -1,0 +1,42 @@
+Database: output/warehouse.db
+SQL file: sql/analytics.sql
+
+== revenue_by_category (3 rows) ==
+category | units_sold | gross_cents | discount_cents | net_revenue_cents
+Home | 42 | 493636 | 34935 | 458701
+Electronics | 30 | 401569 | 39936 | 361633
+Books | 27 | 276115 | 19737 | 256378
+
+== monthly_revenue_and_completed_orders (6 rows) ==
+year | month | completed_orders | net_revenue_cents
+2026 | 2 | 4 | 494193
+2026 | 3 | 1 | 51646
+2026 | 4 | 1 | 95997
+2026 | 5 | 1 | 138227
+2026 | 7 | 2 | 169086
+2026 | 9 | 1 | 127563
+
+== top_10_customers_by_revenue (3 rows) ==
+customer_id | customer_name | city | completed_orders | net_revenue_cents
+C0003 | Customer 3 | Mumbai | 5 | 566860
+C0001 | Customer 1 | Indore | 2 | 260242
+C0002 | Customer 2 | Bengaluru | 3 | 249610
+
+== top_10_products_by_quantity_and_revenue (3 rows) ==
+product_id | product_name | category | units_sold | net_revenue_cents
+P0001 | Product 1 | Home | 42 | 458701
+P0003 | Product 3 | Electronics | 30 | 361633
+P0002 | Product 2 | Books | 27 | 256378
+
+== daily_sales_trend (10 rows) ==
+sale_date | completed_orders | units_sold | net_revenue_cents
+2026-02-02 | 1 | 10 | 101967
+2026-02-05 | 1 | 10 | 95172
+2026-02-17 | 1 | 15 | 182353
+2026-02-27 | 1 | 7 | 114701
+2026-03-23 | 1 | 7 | 51646
+2026-04-23 | 1 | 8 | 95997
+2026-05-16 | 1 | 13 | 138227
+2026-07-01 | 1 | 10 | 91197
+2026-07-24 | 1 | 8 | 77889
+2026-09-13 | 1 | 11 | 127563

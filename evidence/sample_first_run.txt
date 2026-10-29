@@ -1,0 +1,9 @@
+INFO SUCCESS {'run_id': 'cfd27e8e-81a5-4a4f-a900-4fa339742778', 'status': 'SUCCESS', 'input_rows': 46, 'output_rows': 30, 'rejected_rows': 0, 'skipped_rows': 0}
+{
+  "run_id": "cfd27e8e-81a5-4a4f-a900-4fa339742778",
+  "status": "SUCCESS",
+  "input_rows": 46,
+  "output_rows": 30,
+  "rejected_rows": 0,
+  "skipped_rows": 0
+}

@@ -1,0 +1,5 @@
+order_id,line_no,product_id,quantity,unit_price_cents,discount_cents
+O0000001,99,P0001,0,100,0
+O0000001,100,P9999,1,100,0
+O0000001,101,P0001,1,100,101
+O0000001,102,P0001,2,FREE,0

@@ -1,0 +1,9 @@
+INFO SUCCESS {'run_id': '12139dd2-9da2-4643-9d5e-e2129892a037', 'status': 'SUCCESS', 'input_rows': 46, 'output_rows': 0, 'rejected_rows': 0, 'skipped_rows': 36}
+{
+  "run_id": "12139dd2-9da2-4643-9d5e-e2129892a037",
+  "status": "SUCCESS",
+  "input_rows": 46,
+  "output_rows": 0,
+  "rejected_rows": 0,
+  "skipped_rows": 36
+}

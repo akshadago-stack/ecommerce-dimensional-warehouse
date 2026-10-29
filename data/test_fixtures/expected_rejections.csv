@@ -1,0 +1,5 @@
+line_no,expected_reason
+99,out_of_range:quantity
+100,invalid_reference:product_id
+101,discount_exceeds_gross
+102,invalid_integer:unit_price_cents

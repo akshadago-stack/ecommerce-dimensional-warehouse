@@ -1,0 +1,43 @@
+Python: 3.13.5
+Generated source rows: {'customers': 3, 'products': 3, 'orders': 10, 'order_items': 30}
+--- FIRST LOAD (exit=0) ---
+INFO SUCCESS {'run_id': 'e093d19e-4684-4807-ac5c-649a42dff30d', 'status': 'SUCCESS', 'input_rows': 46, 'output_rows': 30, 'rejected_rows': 0, 'skipped_rows': 0}
+{
+  "run_id": "e093d19e-4684-4807-ac5c-649a42dff30d",
+  "status": "SUCCESS",
+  "input_rows": 46,
+  "output_rows": 30,
+  "rejected_rows": 0,
+  "skipped_rows": 0
+}
+Counts: {'dim_customer': 3, 'dim_product': 3, 'dim_date': 10, 'fact_sales_order_line': 30, 'etl_runs': 1, 'rejected_records': 0}
+Foreign key check violations: 0
+--- IDENTICAL RERUN (exit=0) ---
+INFO SUCCESS {'run_id': '4efc60cb-c2f9-4c67-8f99-657bf443789e', 'status': 'SUCCESS', 'input_rows': 46, 'output_rows': 0, 'rejected_rows': 0, 'skipped_rows': 36}
+{
+  "run_id": "4efc60cb-c2f9-4c67-8f99-657bf443789e",
+  "status": "SUCCESS",
+  "input_rows": 46,
+  "output_rows": 0,
+  "rejected_rows": 0,
+  "skipped_rows": 36
+}
+Counts: {'dim_customer': 3, 'dim_product': 3, 'dim_date': 10, 'fact_sales_order_line': 30, 'etl_runs': 2, 'rejected_records': 0}
+Foreign key check violations: 0
+--- INJECTED FAILURE (exit=1, expected nonzero) ---
+ERROR FAILED run_id=d308b858-f695-442e-8d96-928ffdef45bd reason=injected_failure_after_fact_insertion
+PIPELINE FAILED: PipelineError: injected_failure_after_fact_insertion
+After failure: {'dim_customer': 0, 'dim_product': 0, 'fact_sales_order_line': 0}
+Statuses: [('FAILED',)]
+--- RETRY AFTER FAILURE (exit=0) ---
+INFO SUCCESS {'run_id': 'be88f1ec-d23d-4334-a130-0f07a49ac018', 'status': 'SUCCESS', 'input_rows': 46, 'output_rows': 30, 'rejected_rows': 0, 'skipped_rows': 0}
+{
+  "run_id": "be88f1ec-d23d-4334-a130-0f07a49ac018",
+  "status": "SUCCESS",
+  "input_rows": 46,
+  "output_rows": 30,
+  "rejected_rows": 0,
+  "skipped_rows": 0
+}
+After retry facts: 30
+Statuses: [('FAILED',), ('SUCCESS',)]

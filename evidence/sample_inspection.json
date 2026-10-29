@@ -1,0 +1,14 @@
+{
+  "dim_customer": 3,
+  "dim_product": 3,
+  "dim_date": 10,
+  "fact_sales_order_line": 30,
+  "etl_runs": 2,
+  "rejected_records": 0,
+  "total_net_revenue_cents": 1076712,
+  "foreign_key_violations": 0,
+  "recent_run_statuses": [
+    "SUCCESS",
+    "SUCCESS"
+  ]
+}

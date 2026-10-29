@@ -1,0 +1,7 @@
+Executed in an isolated temporary directory with Python 3.13.5.
+Command-equivalent: generate_dataset(lines=100000, seed=42) then run_pipeline(...).
+Generated: customers=200, products=80, orders=33334, order_items=100000.
+Loaded: new sales facts=90028, rejected source rows=0, skipped rows=9972.
+SQLite foreign-key violations=0.
+Cancelled/pending order lines are intentionally excluded from completed sales.
+This is a functionality smoke test, NOT a Phase 5 performance benchmark.

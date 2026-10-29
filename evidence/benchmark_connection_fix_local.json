@@ -1,0 +1,43 @@
+{
+  "large_source_counts": {
+    "customers": 200,
+    "order_items": 100000,
+    "orders": 33334,
+    "products": 80
+  },
+  "methodology": "Python time.perf_counter measures ETL only (including SQLite database initialization and commit); CSV generation and report writing excluded. Both input loads use fresh, separate SQLite databases in a temporary directory. Results are machine/environment-specific. No performance optimization or before/after comparison was performed.",
+  "requested_large_order_lines": 100000,
+  "results": [
+    {
+      "accepted_source_rows_not_rejected_or_skipped": 46,
+      "dataset": "starter",
+      "duration_seconds": 0.019218,
+      "final_fact_rows": 30,
+      "foreign_key_violations": 0,
+      "new_completed_order_facts": 30,
+      "rejected_source_rows": 0,
+      "skipped_source_rows": 0,
+      "source_directory": "data/sample_input",
+      "source_rows_processed": 46,
+      "sqlite_database_bytes": 77824,
+      "status": "SUCCESS",
+      "throughput_source_rows_per_second": 2393.62
+    },
+    {
+      "accepted_source_rows_not_rejected_or_skipped": 123642,
+      "dataset": "large",
+      "duration_seconds": 3.274221,
+      "final_fact_rows": 90028,
+      "foreign_key_violations": 0,
+      "new_completed_order_facts": 90028,
+      "rejected_source_rows": 0,
+      "skipped_source_rows": 9972,
+      "source_directory": "/tmp/ecommerce_benchmark_7h4ntm68/large_input",
+      "source_rows_processed": 133614,
+      "sqlite_database_bytes": 23932928,
+      "status": "SUCCESS",
+      "throughput_source_rows_per_second": 40807.88
+    }
+  ],
+  "seed": 42
+}

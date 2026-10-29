@@ -1,0 +1,219 @@
+{
+  "conflicting_duplicate_rows_counted_as_rejected": 0,
+  "counting_rule": "Each physical source row is classified once: accepted_reference (customers/products/order headers), completed_line, noncompleted_line, exact_duplicate, or rejected. Conflicting duplicates are included in rejected, not counted twice. ETL skipped_rows additionally includes already-loaded dimension/fact records on reruns; output_rows counts new fact rows, not accepted source rows.",
+  "duplicate_source_rows_including_conflicts": 0,
+  "idempotency_copy_replay": {
+    "after": {
+      "dim_customer": 3,
+      "dim_date": 10,
+      "dim_product": 3,
+      "discount_cents": 94608,
+      "fact_sales_order_line": 30,
+      "gross_cents": 1171320,
+      "net_cents": 1076712
+    },
+    "before": {
+      "dim_customer": 3,
+      "dim_date": 10,
+      "dim_product": 3,
+      "discount_cents": 94608,
+      "fact_sales_order_line": 30,
+      "gross_cents": 1171320,
+      "net_cents": 1076712
+    },
+    "run": {
+      "input_rows": 46,
+      "output_rows": 0,
+      "rejected_rows": 0,
+      "run_id": "99a9497b-13b9-457a-9102-dc54ce3edc4c",
+      "skipped_rows": 36,
+      "status": "SUCCESS"
+    },
+    "same_business_snapshot": true
+  },
+  "run_audit": {
+    "error_message": null,
+    "input_rows": 46,
+    "output_rows": 0,
+    "rejected_rows": 0,
+    "skipped_rows": 36,
+    "status": "SUCCESS"
+  },
+  "scope": "Reconciles a complete source snapshot against a warehouse containing only that snapshot (or an identical rerun). Historical mixes and conflicting source updates require separate controlled reconciliation.",
+  "selected_run_id": "12139dd2-9da2-4643-9d5e-e2129892a037",
+  "source_classification": {
+    "accepted_reference": 16,
+    "completed_line": 30,
+    "exact_duplicate": 0,
+    "noncompleted_line": 0,
+    "rejected": 0
+  },
+  "source_directory": "data/sample_input",
+  "source_rows_by_file": {
+    "customers.csv": 3,
+    "order_items.csv": 30,
+    "orders.csv": 10,
+    "products.csv": 3
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 22
+  },
+  "validations": [
+    {
+      "actual_value": "SUCCESS",
+      "difference": 0,
+      "expected_value": "SUCCESS",
+      "status": "PASS",
+      "validation_name": "selected_run_success"
+    },
+    {
+      "actual_value": 46,
+      "difference": 0,
+      "expected_value": 46,
+      "status": "PASS",
+      "validation_name": "source_input_row_count"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "source_rejected_row_count"
+    },
+    {
+      "actual_value": 46,
+      "difference": 0,
+      "expected_value": 46,
+      "status": "PASS",
+      "validation_name": "source_row_classification_balance"
+    },
+    {
+      "actual_value": [],
+      "difference": 0,
+      "expected_value": [],
+      "status": "PASS",
+      "validation_name": "rejected_source_row_identity_match"
+    },
+    {
+      "actual_value": [],
+      "difference": 0,
+      "expected_value": [],
+      "status": "PASS",
+      "validation_name": "rejection_reason_match"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "conflicting_duplicate_rejections"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "audit_new_facts_vs_ingest_lineage"
+    },
+    {
+      "actual_value": true,
+      "difference": 0,
+      "expected_value": true,
+      "status": "PASS",
+      "validation_name": "audit_skips_at_least_source_exclusions"
+    },
+    {
+      "actual_value": 30,
+      "difference": 0,
+      "expected_value": 30,
+      "status": "PASS",
+      "validation_name": "completed_order_fact_count"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "source_fact_keys_missing_from_target"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "unexpected_target_fact_keys"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "source_to_fact_row_values_mismatched"
+    },
+    {
+      "actual_value": 99,
+      "difference": 0,
+      "expected_value": 99,
+      "status": "PASS",
+      "validation_name": "source_vs_fact_quantity"
+    },
+    {
+      "actual_value": 1171320,
+      "difference": 0,
+      "expected_value": 1171320,
+      "status": "PASS",
+      "validation_name": "source_vs_fact_gross_amount_cents"
+    },
+    {
+      "actual_value": 94608,
+      "difference": 0,
+      "expected_value": 94608,
+      "status": "PASS",
+      "validation_name": "source_vs_fact_discount_cents"
+    },
+    {
+      "actual_value": 1076712,
+      "difference": 0,
+      "expected_value": 1076712,
+      "status": "PASS",
+      "validation_name": "source_vs_fact_net_amount_cents"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "fact_foreign_key_violations"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "duplicate_fact_grain_keys"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "invalid_financial_equations"
+    },
+    {
+      "actual_value": 0,
+      "difference": 0,
+      "expected_value": 0,
+      "status": "PASS",
+      "validation_name": "cancelled_pending_order_fact_count"
+    },
+    {
+      "actual_value": true,
+      "difference": 0,
+      "expected_value": true,
+      "status": "PASS",
+      "validation_name": "idempotent_replay_business_snapshot"
+    }
+  ],
+  "warehouse_database": "output/warehouse.db"
+}

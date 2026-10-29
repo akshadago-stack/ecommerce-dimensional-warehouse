@@ -1,0 +1,3 @@
+run_id,started_at,ended_at,status,input_rows,output_rows,rejected_rows,skipped_rows,error_message
+cfd27e8e-81a5-4a4f-a900-4fa339742778,2026-10-29T02:06:07+00:00,2026-10-29T02:06:07+00:00,SUCCESS,46,30,0,0,
+12139dd2-9da2-4643-9d5e-e2129892a037,2026-10-29T02:06:08+00:00,2026-10-29T02:06:08+00:00,SUCCESS,46,0,0,36,
